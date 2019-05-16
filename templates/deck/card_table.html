@@ -1,10 +1,14 @@
 {% block contents %}
 
-    <div>
-        <div>
-            <button id="class" name="{{ cardClass }}">{{ cardClass }}</button>
-            <br>
-            <button id="neutral" name="neutral">Neutral</button>
+    <div class="container">
+        <div class="row">
+            <div class="column-md-4">
+                <button id="class" name="{{ cardClass }}"><div id="{{ cardClass }}"><img src="/static/images/classes-sprites.png"></div>{{ cardClass }}</button>
+            </div>
+{#                <br>#}
+            <div class="column-md-4">
+                <button id="neutral" name="neutral"><div id="neutral"><img src="/static/images/classes-sprites.png"></div>Neutral</button>
+            </div>
         </div>
 
 

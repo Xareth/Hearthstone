@@ -6,7 +6,27 @@ body {
 
 /*  ============================ MAIN PAGE =========================*/
 
+
+    #container #hoverShow1
+    {
+      display: none;
+      /*position: absolute;*/
+      /*background-color: #ff0000;*/
+      /*width: 250px;*/
+      /*height: 250px;*/
+      /*left: 200px;*/
+      /*top: 100px;*/
+    }
+
+
+    #container:hover #hoverShow1
+    {
+      display: block;
+    }
+
+
   #container{
+    min-height: 240px;
     padding: 10px;
     max-width: fit-content;
     text-align: center;
@@ -83,6 +103,58 @@ body {
 /*}*/
 
 /*  ============================ CARD DISPLAY =========================*/
+
+
+#druid, #hunter, #mage, #paladin, #priest, #rogue, #shaman, #warlock, #warrior, #neutral {
+  /*image: url('../images/classes-sprites.png');*/
+  background-repeat: no-repeat;
+  object-fit: none;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  position: absolute;
+
+}
+
+#druid img{
+    object-position: 0 -192px;
+    }
+
+#hunter img{
+    object-position: 0 -160px;
+    }
+
+#mage img {
+    object-position: 0 -256px;
+}
+
+#paladin img {
+    object-position: 0 -128px;
+}
+
+#priest img{
+    object-position: 0 -288px;
+}
+
+#rogue img{
+    object-position: 0 -96px;
+}
+
+#shaman img{
+    object-position: 0 -64px;
+}
+
+#warlock img{
+    object-position: 0 -224px;
+}
+
+#warrior img{
+    object-position: 0 -32px;
+}
+
+#neutral img{
+    object-position: 0 0;
+    }
 
     .fit-image {
     width: 100%;
