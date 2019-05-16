@@ -7,15 +7,17 @@
 
     <div class="container" id="outer">
         <h1>
-            <div class="container" id="choose" style="text-align: center">
-                <img src="/static/images/choose2.png">
+
+            <div class="container" id="choose">
+                <img src="{{ url_for('static', filename="images/choose2.PNG") }}">
+
             </div>
         </h1>
         <div class="container" id="inner">
             <div class="row">
                 <div class="col-4">
                     <div id="container">
-                        <a href="{{ url_for('route_deck_builder', class="druid") }}"><img data-name="druid"
+                        <a href="{{ url_for('route_deck_builder', class="Druid") }}"><img data-name="druid"
                                                                                           src="/static/images/db-class-druid.jpg"
                                                                                           class="center portrait-img">
                         </a>
@@ -24,7 +26,7 @@
                 </div>
                 <div class="col-4">
                     <div id="container">
-                        <a href="{{ url_for('route_deck_builder', class="hunter") }}"><img class="portrait-img"
+                        <a href="{{ url_for('route_deck_builder', class="Hunter") }}"><img class="portrait-img"
                                                                                            data-name="hunter"
                                                                                            src="/static/images/db-class-hunter.jpg"></a>
                         <div id="hoverShow1"> Hunter </div>
@@ -32,7 +34,7 @@
                 </div>
                 <div class="col-4">
                     <div id="container">
-                        <a href="{{ url_for('route_deck_builder', class="mage") }}"><img class="portrait-img"
+                        <a href="{{ url_for('route_deck_builder', class="Mage") }}"><img class="portrait-img"
                                                                                          data-name="mage"
                                                                                          src="/static/images/db-class-mage.jpg"></a>
                     <div id="hoverShow1"> Mage </div>
@@ -43,7 +45,7 @@
             <div class="row">
                 <div class="col-4">
                     <div id="container">
-                        <a href="{{ url_for('route_deck_builder', class="paladin") }}"><img class="portrait-img"
+                        <a href="{{ url_for('route_deck_builder', class="Paladin") }}"><img class="portrait-img"
                                                                                             data-name="paladin"
                                                                                             src="/static/images/db-class-paladin.jpg">
                         </a>
@@ -52,7 +54,7 @@
                 </div>
                 <div class="col-4">
                     <div id="container">
-                        <a href="{{ url_for('route_deck_builder', class="priest") }}"><img class="portrait-img"
+                        <a href="{{ url_for('route_deck_builder', class="Priest") }}"><img class="portrait-img"
                                                                                            data-name="priest"
                                                                                            src="/static/images/db-class-priest.jpg"></a>
                       <div id="hoverShow1"> Priest </div>
@@ -60,7 +62,7 @@
                 </div>
                 <div class="col-4">
                     <div id="container">
-                        <a href="{{ url_for('route_deck_builder', class="rogue") }}"><img class="portrait-img"
+                        <a href="{{ url_for('route_deck_builder', class="Rogue") }}"><img class="portrait-img"
                                                                                           data-name="rogue"
                                                                                           src="/static/images/db-class-rogue.jpg"></a>
                         <div id="hoverShow1"> Rogue </div>
@@ -71,7 +73,7 @@
             <div class="row">
                 <div class="col-4">
                     <div id="container">
-                        <a href="{{ url_for('route_deck_builder', class="shaman") }}"><img data-name="shaman"
+                        <a href="{{ url_for('route_deck_builder', class="Shaman") }}"><img data-name="shaman"
                                                                                            class="d-block portrait-img"
                                                                                            src="/static/images/db-class-shaman.jpg">
                         </a>
@@ -80,7 +82,7 @@
                 </div>
                 <div class="col-4">
                     <div id="container">
-                        <a href="{{ url_for('route_deck_builder', class="warlock") }}"><img class="portrait-img"
+                        <a href="{{ url_for('route_deck_builder', class="Warlock") }}"><img class="portrait-img"
                                                                                             data-name="warlock"
                                                                                             src="/static/images/db-class-warlock.jpg"></a>
                         <div id="hoverShow1"> Warlock </div>
@@ -88,7 +90,7 @@
                 </div>
                 <div class="col-4">
                     <div id="container">
-                        <a href="{{ url_for('route_deck_builder', class="warrior") }}"><img class="portrait-img"
+                        <a href="{{ url_for('route_deck_builder', class="Warrior") }}"><img class="portrait-img"
                                                                                             data-name="warrior"
                                                                                             src="/static/images/db-class-warrior.jpg"></a>
                         <div id="hoverShow1"> Warrior </div>

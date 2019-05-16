@@ -16,14 +16,20 @@ export default class DeckModel {
             5: 0,
             6: 0,
             7: 0,
-        }
+        };
 
         for (let card of this.deck) {
             const cardManaCost = card.cost;
             const cardOccuresOneTimeInDeck = card.occurance === 1;
             const manaCountToIncrease = cardOccuresOneTimeInDeck ? 1 : 2;
 
-            initialManaChart[cardManaCost] += manaCountToIncrease;
+            //if mana cost is higher than 7, add card to position 7
+            const isManaCostHigherThan7 = Boolean(!initialManaChart.hasOwnProperty(cardManaCost));
+            if (isManaCostHigherThan7) {
+                initialManaChart['7'] += manaCountToIncrease;
+            } else {
+                initialManaChart[cardManaCost] += manaCountToIncrease;
+            }
         }
         this.deckManaChart = {...initialManaChart}
     }
@@ -39,23 +45,23 @@ export default class DeckModel {
 
     addCardToDeck(cardId) {
         const cardInDeck = this.deck.find(card => card.id === cardId);
+        const numberOfCardsInDeck = this.getNumberOfCardsInDeck();
+        const isDeckWithinLimit = numberOfCardsInDeck < 30;
 
         if (cardInDeck) {
             const isAnotherCardCanBeAdded = this.checkIfCardCanBeAdded(cardInDeck);
-            if (isAnotherCardCanBeAdded) {
+            if (isAnotherCardCanBeAdded && isDeckWithinLimit) {
                 cardInDeck.occurance += 1;
                 this.cardsInDeckNum += 1;
                 this.updateDeckManaChart();
             }
-        } else {
+        } else if (isDeckWithinLimit) {
             const card = this.cards.filter(card => card.id === cardId)[0];
             card.occurance = 1;
             this.deck.push(card);
             this.cardsInDeckNum += 1;
             this.updateDeckManaChart();
         }
-        console.log(this.deck)
-        console.log(`There are ${this.cardsInDeckNum} cards in the deck`)
     }
 
     removeCardFromDeck(cardId) {
@@ -72,7 +78,9 @@ export default class DeckModel {
                 this.updateDeckManaChart();
             }
         }
-        console.log(this.deck)
-        console.log(`There are ${this.cardsInDeckNum} cards in the deck`)
+    }
+
+    getNumberOfCardsInDeck() {
+        return this.deck.reduce((total, card) => total + card.occurance, 0);
     }
 }
