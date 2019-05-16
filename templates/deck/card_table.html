@@ -2,14 +2,17 @@
 
     <div class="container">
         <div class="row">
-            <div class="column-md-4">
-                <button id="class" name="{{ cardClass }}"><div id="{{ cardClass }}"><img src="/static/images/classes-sprites.png"></div>{{ cardClass }}</button>
+            <div class="column">
+                <div class="column" id="{{ cardClass }}"><img src="/static/images/classes-sprites.png"></div>
+                <button id="class" name="{{ cardClass }}" style="width: 100px; text-align: right; background-color: #e1cebf"> {{ cardClass }}</button>
             </div>
-{#                <br>#}
+
             <div class="column-md-4">
-                <button id="neutral" name="neutral"><div id="neutral"><img src="/static/images/classes-sprites.png"></div>Neutral</button>
+               <div class="column" id="neutral2"><img src="/static/images/classes-sprites.png"></div>
+               <button id="neutral" name="neutral" style="width: 100px; text-align: right; background-color: #e1cebf">neutral</button>
             </div>
         </div>
+    </div>
 
 
         <div id="six_cards" class="container px-0 card_display_container">

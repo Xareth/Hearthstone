@@ -105,7 +105,7 @@ body {
 /*  ============================ CARD DISPLAY =========================*/
 
 
-#druid, #hunter, #mage, #paladin, #priest, #rogue, #shaman, #warlock, #warrior, #neutral {
+#druid, #hunter, #mage, #paladin, #priest, #rogue, #shaman, #warlock, #warrior, #neutral2 {
   /*image: url('../images/classes-sprites.png');*/
   background-repeat: no-repeat;
   object-fit: none;
@@ -152,7 +152,7 @@ body {
     object-position: 0 -32px;
 }
 
-#neutral img{
+#neutral2 img{
     object-position: 0 0;
     }
 
